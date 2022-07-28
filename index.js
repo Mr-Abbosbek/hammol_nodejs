@@ -570,6 +570,18 @@ app.get("/api", (req, res) => {
   res.send("<h1>Hello World!</h1>");
 })
 
+app.get('/api/product/:id', (req, res)=>{
+  let product = products.products.find(el=> el.id == req.params.id)
+  if (!product) {
+      res.status(404).json({
+          error: 'NOT_FOUND',
+          msg: "Topilmadi"
+      })
+      return
+  }
+  res.json(product)
+})
+
 app.get('/api/category', (req,res)=> {
   res.send(categories)
 })
