@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-app.get("/", (req, res) => {
+app.get("/apia", (req, res) => {
   res.send("<h1>Hello World!</h1>");
 })
 
