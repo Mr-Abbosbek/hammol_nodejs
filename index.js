@@ -570,6 +570,10 @@ app.get("/api", (req, res) => {
   res.send("<h1>Hello World!</h1>");
 })
 
+app.get('/api/category', (req,res)=> {
+  res.send(categories)
+})
+
 app.listen(port, ()=>{
   console.log(`App listen on port http://localhost:${port}`);
 })
